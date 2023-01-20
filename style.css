@@ -1,0 +1,152 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+
+a {
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar a {
+  font-size: 4vmin;
+  font-weight: 200;
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* TODO: Loading Animation 
+.loading-screen { 
+  background-color: black;
+  height: 100vh;
+  animation: unlock 4s;
+  display: block
+}
+
+@keyframes unlock {
+  0% { opacity:1}
+  50% {opacity: 1}
+  99% {display: none}
+  100% {opacity:0; display: none}
+  
+}
+
+.square {
+  filter: invert(100%);
+  width: 10vh;
+} */
+
+.main-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.entry-layout {
+  display: grid;
+  grid-column: 1 / 13;
+  grid-template-rows: 100vh 20fr 20fr;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 150vh;
+}
+
+.wide-box {
+  background-color: #99ccff;
+  grid-column: 1 / 3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  z-index: -2;
+  min-height: auto;
+}
+
+.landing-img {
+  grid-column: 1/10;
+  grid-row: 1 / 10;
+  background-size: cover;
+  background-position: right 100%;
+  background-image: url("https://cdn.glitch.global/2360488c-21a2-4350-8bc8-cb682b416526/pexels-tara-winstead-8386369.jpg?v=1674061561709");
+  max-width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -1;
+}
+
+.tagline {
+  align-self: center;
+  grid-column: 2 / 9;
+  grid-row: 3 / 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+  font-size: 20vmin;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.down-arrow {
+  filter: invert(100%);
+  grid-column: 9/10;
+  grid-row: 8/10;
+  max-height: 7vmin;
+}
+
+.training-sub {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  color: white;
+  display: flex;
+  text-align: right;
+  padding: 10px 20px 0px 20px;
+  background-image: linear-gradient(to bottom right, #80BCEE, #0066CC);
+}
+
+.nielit-info-card {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  display: flex;
+  text-align: left;
+  padding: 10px 20px 40px 20px;
+  color: white;
+  background-image:linear-gradient(to bottom right, #0066CC, #000066);
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 4vmin;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 3vmin;
+}
+
+
+.footer {
+  background-color: #333333;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;  
+}
